@@ -1,3 +1,9 @@
-export const getEnumLength = (enumType: any): number => {
-  return Object.keys(enumType).filter(isNaN as any).length;
+export const getEnumLength = (
+  enumType: Record<number | string, number | string>
+): number => {
+  const stringKeys = Object.keys(enumType).filter((key) => {
+    const numberKey = Number(key);
+    return isNaN(numberKey);
+  });
+  return stringKeys.length;
 };
