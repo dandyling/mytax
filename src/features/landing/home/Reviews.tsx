@@ -33,7 +33,7 @@ export const Reviews = () => {
             as="h2"
             textTransform={["none", null, "uppercase"]}
             fontSize={["large", null, "3xl"]}
-            fontWeight="thin"
+            fontWeight={["medium", null, "thin"]}
           >
             "Saves me time on filling tax that would normally takes me a few
             months to do!"
@@ -42,7 +42,7 @@ export const Reviews = () => {
             mt={[1, null, 8]}
             textTransform="uppercase"
             fontSize={["medium", null, "3xl"]}
-            fontWeight="thin"
+            fontWeight={["medium", null, "thin"]}
           >
             ~ Lily
           </Text>

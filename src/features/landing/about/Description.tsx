@@ -15,13 +15,13 @@ export function Description() {
         fontSize={["2xl", null, "3xl"]}
         padding={[8, null, 16]}
       >
-        <Text my={[4, null, 8]} fontWeight="thin">
+        <Text my={[4, null, 8]} fontWeight={["normal", null, "thin"]}>
           We are a team of professionals who would like to make your life
           better. We believe that paying tax should be a sweet experience, not
           one you should be dreading every year. Thus, we strive to make a
           difference so that your life can be better.
         </Text>
-        <Text my={[4, null, 8]} fontWeight="thin">
+        <Text my={[4, null, 8]} fontWeight={["normal", null, "thin"]}>
           Faced with the same problem as you do, we were frustrated by the
           user-unfriendliness of the user interface of the e-filing website.
           Thus, we created this platform so that you can easily pay your tax

@@ -14,7 +14,7 @@ export const Footer = () => {
         as="h3"
         textTransform="uppercase"
         fontSize="2xl"
-        fontWeight="thin"
+        fontWeight={["medium", null, "thin"]}
         my={[4, null, 8]}
       >
         MYTAX
