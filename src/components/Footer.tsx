@@ -15,18 +15,19 @@ export const Footer = () => {
         textTransform="uppercase"
         fontSize="2xl"
         fontWeight="thin"
-        my="16"
+        my={[4, null, 8]}
       >
         MYTAX
       </Heading>
       <Flex
+        flexDirection={["column", null, "row"]}
         justifyContent="flex-start"
-        alignItems="flex-start"
+        alignItems={["center", null, "flex-start"]}
         textAlign="center"
         width="100%"
       >
         <Flex
-          my="8"
+          my={[4, null, 8]}
           flex="1"
           direction="column"
           justifyContent="center"
@@ -40,7 +41,7 @@ export const Footer = () => {
           </Text>
         </Flex>
         <Flex
-          my="8"
+          my={[4, null, 8]}
           flex="1"
           direction="column"
           justifyContent="center"
@@ -57,7 +58,7 @@ export const Footer = () => {
           </Text>
         </Flex>
         <Flex
-          my="8"
+          my={[4, null, 8]}
           flex="1"
           direction="column"
           justifyContent="center"
@@ -66,10 +67,10 @@ export const Footer = () => {
           <Text fontSize="xl" textTransform="uppercase" my="4">
             Follow
           </Text>
-          <Link fontSize="medium" mt="4">
+          <Link fontSize="medium" mt="4" to="/">
             Instagram
           </Link>
-          <Link fontSize="medium" mb="4">
+          <Link fontSize="medium" mb="4" to="/">
             Facebook
           </Link>
         </Flex>

@@ -1,8 +1,16 @@
-import { Button, Flex, Heading, Text } from "@chakra-ui/react";
+import {
+  Button,
+  Flex,
+  Heading,
+  Text,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
 
 export function Demo() {
+  const isPortrait = useBreakpointValue({ base: true, md: false });
+
   return (
     <Flex
       as="section"
@@ -12,14 +20,14 @@ export function Demo() {
       alignItems="center"
       backgroundColor="white"
       py="16"
-      px="32"
+      px={[4, null, 32]}
       textAlign="center"
     >
       <Heading
         as="h1"
         color="purple.500"
         textTransform="uppercase"
-        fontSize="4xl"
+        fontSize={["3xl", null, "4xl"]}
         fontWeight="normal"
         my="4"
       >
@@ -36,8 +44,13 @@ export function Demo() {
         my="8"
         borderRadius="none"
       >
-        <Text fontSize="xl" fontWeight="semibold" size="large">
-          Purchase our service for RM 10 only
+        <Text
+          fontSize="xl"
+          fontWeight="semibold"
+          size="large"
+          textTransform={isPortrait ? "uppercase" : "none"}
+        >
+          {isPortrait ? "Purchase" : "Purchase our service for RM 10 only"}
         </Text>
       </Button>
     </Flex>

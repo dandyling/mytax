@@ -9,7 +9,7 @@ export function Hero() {
       backgroundPosition="center"
       backgroundRepeat="no-repeat"
       backgroundSize="cover"
-      height="3xl"
+      height={["xl", null, "3xl"]}
       justifyContent="center"
       alignItems="center"
       width="100%"

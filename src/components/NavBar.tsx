@@ -48,7 +48,7 @@ function NavBar(props: NavBarProps) {
           className="navbar__menu"
           backgroundColor="transparent"
           color="white"
-          fontSize="4xl"
+          fontSize="3xl"
           aria-label="Open menu"
           onClick={onClickMenu}
           display={isVertical ? "inline-flex" : "none"}
@@ -57,7 +57,11 @@ function NavBar(props: NavBarProps) {
       </Flex>
       {isExpanded && (
         <>
-          <Flex className="navbar__middle" fontSize="medium" color="white">
+          <Flex
+            className="navbar__middle"
+            fontSize={["4xl", null, "medium"]}
+            color="white"
+          >
             {links.map((link, i) => {
               return (
                 <Link
@@ -73,12 +77,13 @@ function NavBar(props: NavBarProps) {
           </Flex>
           <Flex className="navbar__end" justifyContent="flex-end">
             <Button
+              padding={[8, null, 0]}
               backgroundColor="purple.500"
               color="white"
               size="lg"
               borderRadius="none"
             >
-              <Text fontSize="small">Buy Now</Text>
+              <Text fontSize={["2xl", null, "small"]}>Buy Now</Text>
             </Button>
           </Flex>
         </>
@@ -101,7 +106,7 @@ export const ResponsiveNavBar = styled(NavBar)`
         justify-content: space-between;
         width: 100%;
         h2, button {
-          color: black;
+          color: ${props.isExpanded ? "black" : "white"};
         }
       }
       .navbar__middle {
@@ -114,6 +119,7 @@ export const ResponsiveNavBar = styled(NavBar)`
         }
       }
       .navbar__end {
+        visibility: hidden;
         flex-direction: column;
         justify-content: flex-end;
       }

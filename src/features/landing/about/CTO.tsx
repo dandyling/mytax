@@ -1,7 +1,15 @@
-import { Container, Flex, Heading, Button } from "@chakra-ui/react";
+import {
+  Container,
+  Flex,
+  Heading,
+  Button,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import React from "react";
 
 export function CTO() {
+  const isPortrait = useBreakpointValue({ base: true, md: false });
+
   return (
     <Flex
       as="section"
@@ -46,7 +54,7 @@ export function CTO() {
           fontSize="xl"
           borderRadius="none"
         >
-          Purchase our service for RM 10
+          {isPortrait ? "Purchase" : "Purchase our service for RM 10"}
         </Button>
       </Container>
     </Flex>

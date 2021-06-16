@@ -5,11 +5,11 @@ export const Reviews = () => {
   return (
     <Box
       as="section"
-      height="4xl"
+      height={["400px", null, "4xl"]}
       width="100%"
       backgroundColor="white"
-      py="32"
-      px="64"
+      py={[8, null, 32]}
+      px={[4, null, 64]}
     >
       <Container maxWidth="180ch" position="relative">
         <Image
@@ -24,24 +24,24 @@ export const Reviews = () => {
           position="absolute"
           flexDirection="column"
           backgroundColor="yellow.50"
-          padding="24"
+          padding={[4, null, 24]}
           width="55%"
           left="0"
           top="120px"
         >
           <Heading
             as="h2"
-            textTransform="uppercase"
-            fontSize="3xl"
+            textTransform={["none", null, "uppercase"]}
+            fontSize={["large", null, "3xl"]}
             fontWeight="thin"
           >
             "Saves me time on filling tax that would normally takes me a few
             months to do!"
           </Heading>
           <Text
-            mt="8"
+            mt={[1, null, 8]}
             textTransform="uppercase"
-            fontSize="3xl"
+            fontSize={["medium", null, "3xl"]}
             fontWeight="thin"
           >
             ~ Lily

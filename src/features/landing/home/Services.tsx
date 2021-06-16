@@ -51,7 +51,7 @@ export const Services = () => {
         justifyContent="center"
         alignItems="center"
         textAlign="center"
-        padding="16"
+        padding={[8, null, 16]}
         maxWidth="180ch"
       >
         <Heading
@@ -60,18 +60,23 @@ export const Services = () => {
           textTransform="uppercase"
           fontSize="3xl"
           fontWeight="thin"
-          my="16"
+          my={[8, 0, 16]}
         >
           Why use our service?
         </Heading>
         <Grid
-          gridTemplateColumns="repeat(3, 1fr)"
+          gridTemplateColumns={["1fr", null, "repeat(3, 1fr)"]}
           gridAutoRows="auto"
           width="100%"
         >
           {posts.map((p, i) => {
             return (
-              <Flex my="16" mx="8" direction="column" key={`${i} - ${p.name}`}>
+              <Flex
+                my={[8, null, 16]}
+                mx={[4, null, 8]}
+                direction="column"
+                key={`${i} - ${p.name}`}
+              >
                 <Heading
                   as="h3"
                   color="purple.500"
@@ -82,7 +87,7 @@ export const Services = () => {
                 >
                   {p.name}
                 </Heading>
-                <Text fontSize="medium" my="8">
+                <Text fontSize="medium" my={[8, null, 8]}>
                   {p.description}
                 </Text>
               </Flex>

@@ -10,7 +10,7 @@ export const Hero = () => {
       backgroundPosition="center"
       backgroundRepeat="no-repeat"
       backgroundSize="cover"
-      height="3xl"
+      height={["2xl", null, "3xl"]}
       justifyContent="center"
       alignItems="center"
       width="100%"
@@ -21,15 +21,15 @@ export const Hero = () => {
         justifyContent="center"
         alignItems="center"
         textAlign="center"
-        backgroundColor="white"
-        maxWidth="80ch"
-        padding="16"
+        backgroundColor={["blackAlpha.800", null, "white"]}
+        maxWidth={["85%", null, "80ch"]}
+        padding={[4, null, 16]}
       >
         <Heading
           as="h1"
-          color="purple.500"
+          color={["white", null, "purple.500"]}
           textTransform="uppercase"
-          fontSize="4xl"
+          fontSize={["4xl"]}
           fontWeight="normal"
           my="4"
         >
