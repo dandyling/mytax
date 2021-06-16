@@ -13,7 +13,7 @@ export const Footer = () => {
       <Heading
         as="h3"
         textTransform="uppercase"
-        fontSize="3xl"
+        fontSize="2xl"
         fontWeight="thin"
         my="16"
       >
@@ -32,10 +32,10 @@ export const Footer = () => {
           justifyContent="center"
           alignItems="center"
         >
-          <Text fontSize="2xl" textTransform="uppercase" my="4">
+          <Text fontSize="xl" textTransform="uppercase" my="4">
             Location
           </Text>
-          <Text fontSize="xl" my="4">
+          <Text fontSize="medium" my="4">
             12C-11-4, One Foresta, Lengkok Kelicap, 11900, Sungai Ara, Penang
           </Text>
         </Flex>
@@ -46,13 +46,13 @@ export const Footer = () => {
           justifyContent="center"
           alignItems="center"
         >
-          <Text fontSize="2xl" textTransform="uppercase" my="4">
+          <Text fontSize="xl" textTransform="uppercase" my="4">
             Contact
           </Text>
-          <Text fontSize="xl" mt="4">
+          <Text fontSize="medium" mt="4">
             (016) 490-5276
           </Text>
-          <Text fontSize="xl" mb="4">
+          <Text fontSize="medium" mb="4">
             dandyling@gmail.com
           </Text>
         </Flex>
@@ -63,13 +63,13 @@ export const Footer = () => {
           justifyContent="center"
           alignItems="center"
         >
-          <Text fontSize="2xl" textTransform="uppercase" my="4">
+          <Text fontSize="xl" textTransform="uppercase" my="4">
             Follow
           </Text>
-          <Link fontSize="xl" mt="4">
+          <Link fontSize="medium" mt="4">
             Instagram
           </Link>
-          <Link fontSize="xl" mb="4">
+          <Link fontSize="medium" mb="4">
             Facebook
           </Link>
         </Flex>

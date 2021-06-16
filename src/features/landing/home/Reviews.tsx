@@ -27,12 +27,12 @@ export const Reviews = () => {
           padding="24"
           width="55%"
           left="0"
-          top="220px"
+          top="120px"
         >
           <Heading
             as="h2"
             textTransform="uppercase"
-            fontSize="4xl"
+            fontSize="3xl"
             fontWeight="thin"
           >
             "Saves me time on filling tax that would normally takes me a few

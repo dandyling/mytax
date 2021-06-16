@@ -1,7 +1,7 @@
 import { Container, Flex, Heading, Button } from "@chakra-ui/react";
 import React from "react";
 
-export const CTO = () => {
+export function CTO() {
   return (
     <Flex
       as="section"
@@ -22,33 +22,33 @@ export const CTO = () => {
         <Heading
           as="h2"
           textTransform="uppercase"
-          fontSize="4xl"
+          fontSize="3xl"
           fontWeight="thin"
           my="4"
         >
-          Check it out now
+          Check out our services now
         </Heading>
         <Heading
           as="h3"
-          fontSize="3xl"
+          fontSize="2xl"
           fontWeight="thin"
           fontStyle="italic"
           my="4"
         >
-          Only for RM 1
+          Saves you time and money
         </Heading>
         <Button
           backgroundColor="purple.500"
           color="white"
-          padding="12"
+          padding="8"
           size="lg"
           my="8"
-          fontSize="2xl"
+          fontSize="xl"
           borderRadius="none"
         >
-          Buy Now
+          Purchase our service for RM 10
         </Button>
       </Container>
     </Flex>
   );
-};
+}

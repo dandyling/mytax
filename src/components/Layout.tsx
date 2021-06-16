@@ -1,6 +1,6 @@
 import { Flex, FlexProps } from "@chakra-ui/react";
 import React, { ReactNode } from "react";
-import { Header } from "../features/landing/Header";
+import { Header } from "./Header";
 import { HeaderZIndex } from "../styles/zIndex";
 
 interface LayoutProps extends FlexProps {

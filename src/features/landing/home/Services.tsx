@@ -58,7 +58,7 @@ export const Services = () => {
           as="h2"
           color="purple.500"
           textTransform="uppercase"
-          fontSize="4xl"
+          fontSize="3xl"
           fontWeight="thin"
           my="16"
         >
@@ -75,14 +75,14 @@ export const Services = () => {
                 <Heading
                   as="h3"
                   color="purple.500"
-                  fontSize="2xl"
+                  fontSize="xl"
                   fontWeight="thin"
                   fontStyle="italic"
                   textTransform="uppercase"
                 >
                   {p.name}
                 </Heading>
-                <Text fontSize="xl" my="8">
+                <Text fontSize="medium" my="8">
                   {p.description}
                 </Text>
               </Flex>
@@ -92,10 +92,10 @@ export const Services = () => {
         <Button
           backgroundColor="purple.500"
           color="white"
-          padding="12"
+          padding="8"
           size="lg"
           my="8"
-          fontSize="2xl"
+          fontSize="xl"
           borderRadius="none"
         >
           Learn More

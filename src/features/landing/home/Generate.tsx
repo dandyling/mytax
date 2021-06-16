@@ -17,7 +17,7 @@ export const Generate = () => {
         <Heading
           as="h2"
           textTransform="uppercase"
-          fontSize="4xl"
+          fontSize="2xl"
           fontWeight="thin"
         >
           Just click next, and we will generate your e-filling tax exemptions

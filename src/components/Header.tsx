@@ -10,7 +10,7 @@ export interface PageLink {
 const pageLinks: PageLink[] = [
   {
     name: "About Us",
-    url: "/",
+    url: "/about-us",
   },
   {
     name: "Our Services",

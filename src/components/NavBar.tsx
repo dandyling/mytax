@@ -33,11 +33,11 @@ function NavBar(props: NavBarProps) {
       {...rest}
     >
       <Flex className="navbar__start" alignItems="center">
-        <Link _hover={{ textDecoration: "none" }}>
+        <Link _hover={{ textDecoration: "none" }} href="/">
           <Heading
             as="h2"
             textTransform="uppercase"
-            fontSize="4xl"
+            fontSize="3xl"
             fontWeight="thin"
             color="white"
           >
@@ -57,7 +57,7 @@ function NavBar(props: NavBarProps) {
       </Flex>
       {isExpanded && (
         <>
-          <Flex className="navbar__middle" fontSize="2xl" color="white">
+          <Flex className="navbar__middle" fontSize="medium" color="white">
             {links.map((link, i) => {
               return (
                 <Link
@@ -75,11 +75,11 @@ function NavBar(props: NavBarProps) {
             <Button
               backgroundColor="purple.500"
               color="white"
-              padding="8"
+              // padding="8"
               size="lg"
               borderRadius="none"
             >
-              <Text>Contact Us</Text>
+              <Text fontSize="small">Contact Us</Text>
             </Button>
           </Flex>
         </>

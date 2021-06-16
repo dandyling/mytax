@@ -1,11 +1,11 @@
-import { Container, Flex, Heading, Button, Text } from "@chakra-ui/react";
+import { Container, Flex, Heading } from "@chakra-ui/react";
 import React from "react";
 
-export const Hero = () => {
+export function Hero() {
   return (
     <Flex
       as="section"
-      bgImage="url('/assets/income-tax.jpg')"
+      bgImage="url('/assets/tax-money.png')"
       backgroundPosition="center"
       backgroundRepeat="no-repeat"
       backgroundSize="cover"
@@ -20,31 +20,21 @@ export const Hero = () => {
         justifyContent="center"
         alignItems="center"
         textAlign="center"
-        backgroundColor="white"
+        backgroundColor="blackAlpha.700"
         maxWidth="80ch"
-        padding="16"
+        width="auto"
+        padding="8"
       >
         <Heading
           as="h1"
-          color="purple.500"
-          textTransform="uppercase"
-          fontSize="5xl"
-          fontWeight="normal"
-          my="4"
-        >
-          Find it difficult to do e-filling? Let us do the heavy work for you
-        </Heading>
-        <Button
-          backgroundColor="purple.500"
           color="white"
-          padding="8"
-          size="lg"
-          my="8"
-          borderRadius="none"
+          textTransform="uppercase"
+          fontSize="4xl"
+          fontWeight="normal"
         >
-          <Text>Purchase our service for RM 1</Text>
-        </Button>
+          About us
+        </Heading>
       </Container>
     </Flex>
   );
-};
+}

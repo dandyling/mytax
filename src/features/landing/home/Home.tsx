@@ -1,6 +1,6 @@
 import React from "react";
-import { Footer } from "../../components/Footer";
-import { Layout } from "../../components/Layout";
+import { Footer } from "../../../components/Footer";
+import { Layout } from "../../../components/Layout";
 import { CTO } from "./CTO";
 import { Demo } from "./Demo";
 import { Generate } from "./Generate";
