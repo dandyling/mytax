@@ -8,6 +8,7 @@ import { Hero } from "./Hero";
 import { Reviews } from "./Reviews";
 import { Services } from "./Services";
 import { Header } from "./Header";
+import { Layout } from "../../components/Layout";
 
 interface Post {
   name: string;
@@ -46,7 +47,7 @@ export const posts: Post[] = [
 
 export const Home = () => {
   return (
-    <Flex flexDirection="column" width="100%" position="relative">
+    <Layout position="relative">
       <Flex
         width="100%"
         position="absolute"
@@ -65,6 +66,6 @@ export const Home = () => {
         <Footer />
       </Flex>
       <Header width="100%" position="absolute" top="0" left="0" />
-    </Flex>
+    </Layout>
   );
 };
