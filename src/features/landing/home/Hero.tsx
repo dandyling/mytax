@@ -6,7 +6,7 @@ export const Hero = () => {
   return (
     <Flex
       as="section"
-      bgImage="url('/assets/income-tax.jpg')"
+      bgImage="url('/assets/income-tax.png')"
       backgroundPosition="center"
       backgroundRepeat="no-repeat"
       backgroundSize="cover"
