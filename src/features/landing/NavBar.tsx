@@ -87,6 +87,7 @@ function NavBar(props: NavBarProps) {
     </Flex>
   );
 }
+
 export const ResponsiveNavBar = styled(NavBar)`
   ${(props) => {
     return props.isVertical
