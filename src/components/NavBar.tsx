@@ -11,6 +11,7 @@ import styled from "@emotion/styled";
 import React from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { PageLink } from "./Header";
+import { Link as ReactRouterLink } from "react-router-dom";
 
 interface NavBarProps extends FlexProps {
   links: PageLink[];
@@ -65,8 +66,9 @@ function NavBar(props: NavBarProps) {
             {links.map((link, i) => {
               return (
                 <Link
+                  as={ReactRouterLink}
                   _hover={{ textDecoration: "none" }}
-                  href={link.url}
+                  to={link.url}
                   mx="4"
                   key={`${i} - ${link.name}`}
                 >

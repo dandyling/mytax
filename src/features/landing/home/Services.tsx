@@ -59,7 +59,7 @@ export const Services = () => {
           color="purple.500"
           textTransform="uppercase"
           fontSize="3xl"
-          fontWeight="thin"
+          fontWeight={["normal", null, "thin"]}
           my={[8, 0, 16]}
         >
           Why use our service?
@@ -81,7 +81,7 @@ export const Services = () => {
                   as="h3"
                   color="purple.500"
                   fontSize="xl"
-                  fontWeight="thin"
+                  fontWeight={["semibold", null, "thin"]}
                   fontStyle="italic"
                   textTransform="uppercase"
                 >
