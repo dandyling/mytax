@@ -92,7 +92,7 @@ export const ResponsiveNavBar = styled(NavBar)`
     return props.isVertical
       ? `
       min-width: 100vw;
-      min-height: ${props.isExpanded ? "100%" : "auto"};
+      min-height: ${props.isExpanded ? "100vh" : "auto"};
       padding: 1rem 1.5rem;
       flex-direction: column;
       justify-content: space-between;
