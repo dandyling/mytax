@@ -1,5 +1,6 @@
 import { Flex } from "@chakra-ui/react";
 import React from "react";
+import { Done } from "./Done";
 import { GetStarted } from "./GetStarted";
 import { ParentsMedical } from "./ParentsMedical";
 import { QuestionType, useQuestion } from "./Question";
@@ -17,13 +18,14 @@ export const GetTax = () => {
       <Flex
         width="100%"
         height="100%"
-        backgroundColor="orange.50"
+        backgroundColor="yellow.50"
         alignItems="center"
         justifyContent="center"
       >
         {question === QuestionType.GetStarted && <GetStarted />}
         {question === QuestionType.Spouse && <Spouse />}
         {question === QuestionType.ParentsMedical && <ParentsMedical />}
+        {question === QuestionType.Done && <Done />}
       </Flex>
     </Flex>
   );

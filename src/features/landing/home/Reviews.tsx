@@ -5,7 +5,7 @@ export const Reviews = () => {
   return (
     <Box
       as="section"
-      height="6xl"
+      height="4xl"
       width="100%"
       backgroundColor="white"
       py="32"

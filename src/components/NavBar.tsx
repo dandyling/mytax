@@ -75,11 +75,10 @@ function NavBar(props: NavBarProps) {
             <Button
               backgroundColor="purple.500"
               color="white"
-              // padding="8"
               size="lg"
               borderRadius="none"
             >
-              <Text fontSize="small">Contact Us</Text>
+              <Text fontSize="small">Buy Now</Text>
             </Button>
           </Flex>
         </>

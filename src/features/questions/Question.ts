@@ -5,6 +5,7 @@ export enum QuestionType {
   GetStarted,
   Spouse,
   ParentsMedical,
+  Done,
 }
 
 const questionState = atom({
@@ -23,5 +24,5 @@ export const useQuestion = () => {
     }
   };
 
-  return { question, goNext };
+  return { question, setQuestion, goNext };
 };

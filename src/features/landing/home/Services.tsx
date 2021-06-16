@@ -18,16 +18,16 @@ export const posts: Post[] = [
   },
   {
     name: "Reasonable Price",
-    description: "Settle your income tax for just RM 1",
+    description: "Settle your income tax for just RM 10",
   },
   {
-    name: "Clean Salary Calculation",
-    description: "We will calculate your tax given your salary and bonus",
+    name: "Net Salary Calculation",
+    description: "We will calculate your clean salary minus tax",
   },
   {
-    name: "Includes Tax Exemptions Changes",
+    name: "Updated Tax Exemptions Changes Every Year",
     description:
-      "Tired of all the different tax-exemptions categories based on different year? We will do the hard job for you",
+      "Tired of keeping track of all the different tax-exemptions every year? Leave it to us",
   },
   {
     name: "Certified Accounting",
@@ -62,7 +62,7 @@ export const Services = () => {
           fontWeight="thin"
           my="16"
         >
-          Our Services
+          Why use our service?
         </Heading>
         <Grid
           gridTemplateColumns="repeat(3, 1fr)"

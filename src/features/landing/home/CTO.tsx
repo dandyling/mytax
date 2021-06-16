@@ -35,7 +35,7 @@ export const CTO = () => {
           fontStyle="italic"
           my="4"
         >
-          Only for RM 1
+          Only for RM 10
         </Heading>
         <Button
           backgroundColor="purple.500"

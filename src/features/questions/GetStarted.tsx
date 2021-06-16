@@ -29,7 +29,7 @@ export const GetStarted = () => {
       </Heading>
       <Button
         my="8"
-        backgroundColor="gray.600"
+        backgroundColor="purple.500"
         color="white"
         size="lg"
         onClick={goNext}

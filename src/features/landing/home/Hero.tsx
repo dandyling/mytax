@@ -1,5 +1,6 @@
 import { Container, Flex, Heading, Button, Text } from "@chakra-ui/react";
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const Hero = () => {
   return (
@@ -35,6 +36,8 @@ export const Hero = () => {
           Find it difficult to do e-Filing? Let us do the heavy work for you
         </Heading>
         <Button
+          as={Link}
+          to="get-your-tax"
           backgroundColor="purple.500"
           color="white"
           padding="8"
@@ -42,8 +45,12 @@ export const Hero = () => {
           my="8"
           borderRadius="none"
         >
-          <Text fontSize="medium" fontWeight="semibold">
-            Purchase our service for RM 10
+          <Text
+            fontSize="medium"
+            textTransform="uppercase"
+            fontWeight="semibold"
+          >
+            Try it out now!
           </Text>
         </Button>
       </Container>
