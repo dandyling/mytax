@@ -243,6 +243,7 @@ export function Purchase() {
                 of MyTax
               </Text>
               <Button
+                type="submit"
                 size="lg"
                 backgroundColor="purple.500"
                 padding={8}
