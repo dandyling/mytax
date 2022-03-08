@@ -1,4 +1,4 @@
-import { Container, Flex, Heading, Button, Grid, Text } from "@chakra-ui/react";
+import { Container, Flex, Heading, Grid, Text } from "@chakra-ui/react";
 import React from "react";
 
 interface Post {
