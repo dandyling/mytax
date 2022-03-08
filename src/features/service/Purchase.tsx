@@ -18,7 +18,8 @@ import { countries } from "./Countries";
 import { Link as ReactRouterLink, useHistory } from "react-router-dom";
 import { FaAngleLeft } from "react-icons/fa";
 import { collection, addDoc } from "firebase/firestore";
-import { db } from "../../App";
+import { analytics, db } from "../../App";
+import { logEvent } from "firebase/analytics";
 
 export function Purchase() {
   const [cardNumber, setCardNumber] = useState("");
@@ -256,6 +257,7 @@ export function Purchase() {
                       zipCode,
                       country,
                     });
+                    logEvent(analytics, "purchase");
                     history.push("/error");
                   } catch (error) {
                     console.error(error);
