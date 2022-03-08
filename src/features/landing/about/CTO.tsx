@@ -6,6 +6,7 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 import React from "react";
+import { Link as ReactRouterLink } from "react-router-dom";
 
 export function CTO() {
   const isPortrait = useBreakpointValue({ base: true, md: false });
@@ -46,7 +47,9 @@ export function CTO() {
           Saves you time and money
         </Heading>
         <Button
+          to="/purchase"
           backgroundColor="purple.500"
+          as={ReactRouterLink}
           color="white"
           padding="8"
           size="lg"
@@ -54,7 +57,7 @@ export function CTO() {
           fontSize="xl"
           borderRadius="none"
         >
-          {isPortrait ? "Purchase" : "Purchase our service for RM 10"}
+          {isPortrait ? "Purchase" : "Purchase our service for RM 25"}
         </Button>
       </Container>
     </Flex>

@@ -50,7 +50,7 @@ export const Hero = () => {
             textTransform="uppercase"
             fontWeight="semibold"
           >
-            Try it out now!
+            Try out our demo now!
           </Text>
         </Button>
       </Container>

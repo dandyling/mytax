@@ -44,6 +44,7 @@ export const Services = () => {
       alignItems="center"
       width="100%"
       backgroundColor="yellow.50"
+      id="services"
     >
       <Container
         display="flex"
@@ -72,7 +73,7 @@ export const Services = () => {
           {posts.map((p, i) => {
             return (
               <Flex
-                my={[8, null, 16]}
+                my={[8, null, 8]}
                 mx={[4, null, 8]}
                 direction="column"
                 key={`${i} - ${p.name}`}
@@ -94,17 +95,6 @@ export const Services = () => {
             );
           })}
         </Grid>
-        <Button
-          backgroundColor="purple.500"
-          color="white"
-          padding="8"
-          size="lg"
-          my="8"
-          fontSize="xl"
-          borderRadius="none"
-        >
-          Learn More
-        </Button>
       </Container>
     </Flex>
   );

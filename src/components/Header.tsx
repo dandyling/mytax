@@ -14,11 +14,11 @@ const pageLinks: PageLink[] = [
   },
   {
     name: "Our Services",
-    url: "/",
+    url: "/#services",
   },
   {
     name: "Contact Us",
-    url: "/",
+    url: "/contact-us",
   },
 ];
 

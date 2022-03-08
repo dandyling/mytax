@@ -1,10 +1,12 @@
 import { Button, Container, Flex, Heading, Icon, Text } from "@chakra-ui/react";
 import React from "react";
 import { ReactComponent as ClockSVG } from "./../../assets/clock.svg";
+import { useExemptionAmount } from "./ExemptionAmount";
 import { useQuestion } from "./Question";
 
 export const GetStarted = () => {
   const { goNext } = useQuestion();
+  const { reset } = useExemptionAmount();
   return (
     <Container
       display="flex"
@@ -32,7 +34,10 @@ export const GetStarted = () => {
         backgroundColor="purple.500"
         color="white"
         size="lg"
-        onClick={goNext}
+        onClick={() => {
+          reset();
+          goNext();
+        }}
       >
         Continue
       </Button>

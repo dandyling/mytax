@@ -3,6 +3,7 @@ import React from "react";
 import { Done } from "./Done";
 import { GetStarted } from "./GetStarted";
 import { ParentsMedical } from "./ParentsMedical";
+import { ParentsMedicalAmount } from "./ParentsMedicalAmount";
 import { QuestionType, useQuestion } from "./Question";
 import { Spouse } from "./Spouse";
 
@@ -25,6 +26,9 @@ export const GetTax = () => {
         {question === QuestionType.GetStarted && <GetStarted />}
         {question === QuestionType.Spouse && <Spouse />}
         {question === QuestionType.ParentsMedical && <ParentsMedical />}
+        {question === QuestionType.ParentsMedicalAmount && (
+          <ParentsMedicalAmount />
+        )}
         {question === QuestionType.Done && <Done />}
       </Flex>
     </Flex>

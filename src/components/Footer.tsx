@@ -67,12 +67,6 @@ export const Footer = () => {
           <Text fontSize="xl" textTransform="uppercase" my="4">
             Follow
           </Text>
-          <Link fontSize="medium" mt="4" to="/">
-            Instagram
-          </Link>
-          <Link fontSize="medium" mb="4" to="/">
-            Facebook
-          </Link>
         </Flex>
       </Flex>
     </Flex>

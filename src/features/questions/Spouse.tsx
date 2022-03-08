@@ -10,10 +10,12 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React, { ReactNode } from "react";
+import { useExemptionAmount } from "./ExemptionAmount";
 import { useQuestion } from "./Question";
 
 export const Spouse = () => {
   const { goNext, question } = useQuestion();
+  const { addAmount } = useExemptionAmount();
   return (
     <Container p="8">
       <OrderedList start={question}>
@@ -22,10 +24,24 @@ export const Spouse = () => {
             First question. Are you married?
           </Heading>
           <Flex py={8} flexDirection="column">
-            <BoxButton my={1} leftContent="Y" onClick={goNext}>
+            <BoxButton
+              my={1}
+              leftContent="Y"
+              onClick={() => {
+                addAmount(13000);
+                goNext();
+              }}
+            >
               Yes
             </BoxButton>
-            <BoxButton my={1} leftContent="N" onClick={goNext}>
+            <BoxButton
+              my={1}
+              leftContent="N"
+              onClick={() => {
+                addAmount(9000);
+                goNext();
+              }}
+            >
               No
             </BoxButton>
           </Flex>

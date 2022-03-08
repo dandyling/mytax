@@ -36,7 +36,7 @@ export function Demo() {
       </Heading>
       <Button
         as={Link}
-        to="/get-your-tax"
+        to="/purchase"
         backgroundColor="purple.500"
         color="white"
         padding="8"
@@ -50,7 +50,7 @@ export function Demo() {
           size="large"
           textTransform={isPortrait ? "uppercase" : "none"}
         >
-          {isPortrait ? "Purchase" : "Purchase our service for RM 10 only"}
+          {isPortrait ? "Purchase" : "Purchase our service for RM 25 only"}
         </Text>
       </Button>
     </Flex>

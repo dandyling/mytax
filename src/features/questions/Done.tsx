@@ -1,10 +1,12 @@
-import { Button, Container, Heading } from "@chakra-ui/react";
+import { Button, Container, Flex, Heading, Text } from "@chakra-ui/react";
 import React from "react";
-import { useHistory } from "react-router-dom";
+import { Link as ReactRouterLink, useHistory } from "react-router-dom";
+import { useExemptionAmount } from "./ExemptionAmount";
 import { QuestionType, useQuestion } from "./Question";
 
 export const Done = () => {
   const { setQuestion } = useQuestion();
+  const { amount } = useExemptionAmount();
   const history = useHistory();
 
   function handleNext() {
@@ -21,17 +23,30 @@ export const Done = () => {
       p="8"
     >
       <Heading as="h1" textAlign="center" fontSize="2xl" color="blackAlpha.700">
-        Your tax exemption is RM 9000
+        Your tax exemption is RM {amount}
       </Heading>
-      <Button
-        my="8"
-        backgroundColor="purple.500"
-        color="white"
-        size="lg"
-        onClick={handleNext}
+      <Flex
+        my="4"
+        flexDirection="column"
+        justifyContent="center"
+        alignItems="center"
       >
-        Finish
-      </Button>
+        <Text my="4" textAlign="center">
+          Note - This is just a demo of what we can do. To purchase our service,
+          click below:
+        </Text>
+        <Button
+          as={ReactRouterLink}
+          to="/purchase"
+          backgroundColor="purple.500"
+          color="white"
+          size="lg"
+          onClick={handleNext}
+          maxWidth="80"
+        >
+          Purchase Service
+        </Button>
+      </Flex>
     </Container>
   );
 };

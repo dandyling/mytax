@@ -79,7 +79,9 @@ function NavBar(props: NavBarProps) {
           </Flex>
           <Flex className="navbar__end" justifyContent="flex-end">
             <Button
-              padding={[8, null, 0]}
+              as={ReactRouterLink}
+              to="/purchase"
+              padding={[8, null, 4]}
               backgroundColor="purple.500"
               color="white"
               size="lg"

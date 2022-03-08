@@ -1,8 +1,8 @@
-import { Container, Flex, Heading, Button } from "@chakra-ui/react";
+import { Button, Container, Flex, Heading, Link } from "@chakra-ui/react";
 import React from "react";
-import { Link as ReactRouterLink } from "react-router-dom";
+import { FaWhatsapp } from "react-icons/fa";
 
-export const CTO = () => {
+export function CTO() {
   return (
     <Flex
       as="section"
@@ -27,20 +27,12 @@ export const CTO = () => {
           fontWeight="thin"
           my="4"
         >
-          Check it out now
-        </Heading>
-        <Heading
-          as="h3"
-          fontSize="2xl"
-          fontWeight="thin"
-          fontStyle="italic"
-          my="4"
-        >
-          Only for RM 25
+          Contact us through WhatsApp
         </Heading>
         <Button
-          to="/purchase"
-          as={ReactRouterLink}
+          as={Link}
+          href="https://wa.me/60164905276"
+          leftIcon={<FaWhatsapp fontSize="1.5rem" />}
           backgroundColor="purple.500"
           color="white"
           padding="8"
@@ -48,10 +40,11 @@ export const CTO = () => {
           my="8"
           fontSize="xl"
           borderRadius="none"
+          target="_blank"
         >
-          Buy Now
+          Contact Us
         </Button>
       </Container>
     </Flex>
   );
-};
+}

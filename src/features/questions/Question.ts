@@ -5,6 +5,7 @@ export enum QuestionType {
   GetStarted,
   Spouse,
   ParentsMedical,
+  ParentsMedicalAmount,
   Done,
 }
 
