@@ -35,6 +35,9 @@ export function Purchase() {
         width="100%"
       >
         <Container
+          as={"form"}
+          name="purchase"
+          method="POST"
           display="flex"
           flexDirection="column"
           justifyContent="center"
@@ -45,6 +48,7 @@ export function Purchase() {
           fontSize={["2xl", null, "3xl"]}
           padding={[8, null, 16]}
           marginTop={8}
+          data-netlify="true"
         >
           <Flex alignItems="center">
             <IconButton
@@ -224,7 +228,9 @@ export function Purchase() {
                     onChange={(e) => setCountry(e.target.value)}
                   >
                     {countries.map((c) => (
-                      <option value={c.code}>{c.name}</option>
+                      <option value={c.code} key={c.code}>
+                        {c.name}
+                      </option>
                     ))}
                   </Select>
                 </Flex>
