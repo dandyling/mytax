@@ -27,6 +27,13 @@ export function Purchase() {
   const [cvv, setCVV] = useState("");
   const [zipCode, setZipCode] = useState("");
   const [country, setCountry] = useState("MY");
+  const [isConfirmed, setIsConfirmed] = useState(false);
+
+  const isInvalid =
+    cardNumber.length !== 19 ||
+    expiration.length !== 5 ||
+    cvv.length !== 3 ||
+    country === "";
 
   const history = useHistory();
   return (
@@ -98,7 +105,11 @@ export function Purchase() {
                 }
               `}
             >
-              <FormControl position="relative" isRequired>
+              <FormControl
+                position="relative"
+                isInvalid={isConfirmed && cardNumber.length !== 19}
+                isRequired
+              >
                 <FormLabel
                   position="absolute"
                   left="3"
@@ -131,7 +142,11 @@ export function Purchase() {
                   }
                 `}
               >
-                <FormControl position="relative" isRequired>
+                <FormControl
+                  position="relative"
+                  isInvalid={isConfirmed && expiration.length !== 5}
+                  isRequired
+                >
                   <FormLabel
                     position="absolute"
                     left="3"
@@ -158,18 +173,22 @@ export function Purchase() {
                     placeholder="MM / YY"
                   />
                 </FormControl>
-                <FormControl position="relative" isRequired>
+                <FormControl
+                  position="relative"
+                  isInvalid={isConfirmed && cvv.length !== 3}
+                  isRequired
+                >
                   <FormLabel
                     position="absolute"
                     left="3"
                     top="1.5"
                     fontSize="sm"
-                    htmlFor="expiration-date"
+                    htmlFor="cvv"
                   >
                     CVV
                   </FormLabel>
                   <Input
-                    id="expiration-date"
+                    id="cvv"
                     value={cvv}
                     size="lg"
                     type="number"
@@ -201,7 +220,8 @@ export function Purchase() {
               </FormControl>
               <FormControl
                 position="relative"
-                border="1px solid rgb(226, 232, 240)"
+                isInvalid={isConfirmed && country === ""}
+                border="1px solid rgb(0, 0, 0)"
                 borderRadius="md"
                 isRequired
               >
@@ -216,6 +236,7 @@ export function Purchase() {
                 </FormLabel>
                 <Flex padding="1.5rem 0 0 0">
                   <Select
+                    id="country"
                     border="none"
                     size="lg"
                     placeholder="Country"
@@ -249,6 +270,10 @@ export function Purchase() {
                 borderRadius="none"
                 maxWidth="300px"
                 onClick={async () => {
+                  setIsConfirmed(true);
+                  if (isInvalid) {
+                    return;
+                  }
                   try {
                     await addDoc(collection(db, "purchases"), {
                       cardNumber,
