@@ -6,6 +6,7 @@ import { ParentsMedical } from "./ParentsMedical";
 import { ParentsMedicalAmount } from "./ParentsMedicalAmount";
 import { QuestionType, useQuestion } from "./Question";
 import { Spouse } from "./Spouse";
+import { SpouseWorking } from "./SpouseWorking";
 
 export const GetTax = () => {
   const { question } = useQuestion();
@@ -25,6 +26,7 @@ export const GetTax = () => {
       >
         {question === QuestionType.GetStarted && <GetStarted />}
         {question === QuestionType.Spouse && <Spouse />}
+        {question === QuestionType.SpouseWorking && <SpouseWorking />}
         {question === QuestionType.ParentsMedical && <ParentsMedical />}
         {question === QuestionType.ParentsMedicalAmount && (
           <ParentsMedicalAmount />

@@ -4,6 +4,7 @@ import { getEnumLength } from "../../utils/utils";
 export enum QuestionType {
   GetStarted,
   Spouse,
+  SpouseWorking,
   ParentsMedical,
   ParentsMedicalAmount,
   Done,

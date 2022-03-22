@@ -11,10 +11,10 @@ import {
 } from "@chakra-ui/react";
 import React, { ReactNode } from "react";
 import { useExemptionAmount } from "./ExemptionAmount";
-import { useQuestion } from "./Question";
+import { QuestionType, useQuestion } from "./Question";
 
 export const Spouse = () => {
-  const { goNext, question } = useQuestion();
+  const { goNext, question, setQuestion } = useQuestion();
   const { addAmount } = useExemptionAmount();
   return (
     <Container p="8">
@@ -28,7 +28,7 @@ export const Spouse = () => {
               my={1}
               leftContent="Y"
               onClick={() => {
-                addAmount(13000);
+                addAmount(9000);
                 goNext();
               }}
             >
@@ -39,7 +39,7 @@ export const Spouse = () => {
               leftContent="N"
               onClick={() => {
                 addAmount(9000);
-                goNext();
+                setQuestion(QuestionType.ParentsMedical);
               }}
             >
               No
