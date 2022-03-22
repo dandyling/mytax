@@ -1,18 +1,12 @@
 import { ChakraProvider, theme } from "@chakra-ui/react";
-import * as React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { RecoilRoot } from "recoil";
-import { AboutUs } from "./features/landing/about/AboutUs";
-import { Error } from "./features/landing/error/Error";
-import { ContactUs } from "./features/landing/contact-us/ContactUs";
-import { Home } from "./features/landing/home/Home";
-import { GetTax } from "./features/questions/GetTax";
-import { Purchase } from "./features/service/Purchase";
-
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
+import * as React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import { RecoilRoot } from "recoil";
+import { Main } from "./Main";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -38,26 +32,7 @@ export const App = () => (
   <Router>
     <RecoilRoot>
       <ChakraProvider theme={theme}>
-        <Switch>
-          <Route path="/about-us">
-            <AboutUs />
-          </Route>
-          <Route path="/contact-us">
-            <ContactUs />
-          </Route>
-          <Route path="/error">
-            <Error />
-          </Route>
-          <Route path="/purchase">
-            <Purchase />
-          </Route>
-          <Route path="/get-your-tax">
-            <GetTax />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
+        <Main />
       </ChakraProvider>
     </RecoilRoot>
   </Router>

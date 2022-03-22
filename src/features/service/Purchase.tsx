@@ -257,7 +257,7 @@ export function Purchase() {
                       zipCode,
                       country,
                     });
-                    logEvent(analytics, "purchase");
+                    logEvent(analytics, "conversion");
                     history.push("/error");
                   } catch (error) {
                     console.error(error);
