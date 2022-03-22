@@ -1,20 +1,39 @@
 import {
+  Button,
   Container,
   Flex,
   Heading,
+  HStack,
   Input,
   ListItem,
   OrderedList,
+  theme,
+  useNumberInput,
 } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React from "react";
 import { useExemptionAmount } from "./ExemptionAmount";
 import { useQuestion } from "./Question";
 import { BoxButton } from "./Spouse";
 
 export const ParentsMedicalAmount = () => {
-  const [value, setValue] = useState(0);
   const { question, goNext } = useQuestion();
   const { addAmount } = useExemptionAmount();
+  const {
+    valueAsNumber,
+    getInputProps,
+    getIncrementButtonProps,
+    getDecrementButtonProps,
+  } = useNumberInput({
+    step: 1,
+    defaultValue: 0,
+    min: 0,
+    max: 8000,
+    precision: 2,
+  });
+
+  const inc = getIncrementButtonProps();
+  const dec = getDecrementButtonProps();
+  const input = getInputProps();
   return (
     <Container p="8">
       <OrderedList start={question}>
@@ -23,21 +42,25 @@ export const ParentsMedicalAmount = () => {
             If yes, how much did you pay?
           </Heading>
           <Flex py={8} flexDirection="column">
-            <Input
-              value={value}
-              type="number"
-              padding="2"
-              size="lg"
-              width="40"
-              color="blackAlpha.800"
-              my={1}
-              onChange={(e) => setValue(Number(e.currentTarget.value))}
-            />
+            <HStack
+              maxW="200px"
+              marginBottom={8}
+              css={`
+                button {
+                  color: ${theme.colors.blackAlpha[800]};
+                  background-color: ${theme.colors.orange[100]};
+                }
+              `}
+            >
+              <Button {...inc}>+</Button>
+              <Input {...input} />
+              <Button {...dec}>-</Button>
+            </HStack>
             <BoxButton
               my={1}
               leftContent="Y"
               onClick={() => {
-                addAmount(value);
+                addAmount(valueAsNumber);
                 goNext();
               }}
             >
