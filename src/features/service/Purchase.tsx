@@ -30,9 +30,9 @@ export function Purchase() {
   const [isConfirmed, setIsConfirmed] = useState(false);
 
   const isInvalid =
-    cardNumber.length !== 19 ||
-    expiration.length !== 5 ||
-    cvv.length !== 3 ||
+    cardNumber.trim().length !== 19 ||
+    expiration.trim().length !== 5 ||
+    cvv.trim().length !== 3 ||
     country === "";
 
   const history = useHistory();
@@ -69,7 +69,7 @@ export function Purchase() {
             <Heading as="h1">Confirm and Pay</Heading>
           </Flex>
           <Text my={[4]} fontWeight={["normal", null, "thin"]}>
-            You will get a PDF copy of all your income tax exemptions.
+            You will get a PDF copy of all your income tax exemptions for RM 25.
           </Text>
           <Text fontWeight={["normal", null, "thin"]}>
             Purchase now and get your tax paid in a few minutes.
@@ -85,13 +85,11 @@ export function Purchase() {
               <Flex>
                 <Image
                   width="10"
-                  alt="Visa Card"
                   src="https://a0.muscache.com/airbnb/static/packages/assets/frontend/legacy-shared/svgs/payments/logo_visa.0adea522bb26bd90821a8fade4911913.svg"
                   mr="4"
                 />
                 <Image
                   width="10"
-                  alt="Master Card"
                   src="https://a0.muscache.com/airbnb/static/packages/assets/frontend/legacy-shared/svgs/payments/logo_mastercard.f18379cf1f27d22abd9e9cf44085d149.svg"
                 />
               </Flex>
@@ -107,7 +105,7 @@ export function Purchase() {
             >
               <FormControl
                 position="relative"
-                isInvalid={isConfirmed && cardNumber.length !== 19}
+                isInvalid={isConfirmed && cardNumber.trim().length !== 19}
                 isRequired
               >
                 <FormLabel
@@ -144,7 +142,7 @@ export function Purchase() {
               >
                 <FormControl
                   position="relative"
-                  isInvalid={isConfirmed && expiration.length !== 5}
+                  isInvalid={isConfirmed && expiration.trim().length !== 5}
                   isRequired
                 >
                   <FormLabel
@@ -175,7 +173,7 @@ export function Purchase() {
                 </FormControl>
                 <FormControl
                   position="relative"
-                  isInvalid={isConfirmed && cvv.length !== 3}
+                  isInvalid={isConfirmed && cvv.trim().length !== 3}
                   isRequired
                 >
                   <FormLabel

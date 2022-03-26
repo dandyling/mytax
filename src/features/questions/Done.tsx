@@ -44,7 +44,7 @@ export const Done = () => {
           onClick={handleNext}
           maxWidth="80"
         >
-          Purchase Service
+          Purchase Service for RM 25
         </Button>
       </Flex>
     </Container>
