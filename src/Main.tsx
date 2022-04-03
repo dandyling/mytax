@@ -6,11 +6,8 @@ import { Error } from "./features/landing/error/Error";
 import { Home } from "./features/landing/home/Home";
 import { GetTax } from "./features/questions/GetTax";
 import { Purchase } from "./features/service/Purchase";
-import { useAnalytics } from "./hooks/useAnalytics";
 
 export const Main = () => {
-  useAnalytics();
-
   return (
     <Switch>
       <Route path="/about-us">
