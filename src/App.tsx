@@ -2,11 +2,10 @@ import { ChakraProvider, theme } from "@chakra-ui/react";
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import * as React from "react";
+import ReactGA from "react-ga";
 import { BrowserRouter as Router } from "react-router-dom";
 import { RecoilRoot } from "recoil";
 import { Main } from "./Main";
-import ReactGA from "react-ga";
-import { useEffect } from "react";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -31,9 +30,6 @@ const TRACKING_ID = "UA-139860994-7";
 ReactGA.initialize(TRACKING_ID);
 
 export const App = () => {
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  }, []);
   return (
     <Router>
       <RecoilRoot>
