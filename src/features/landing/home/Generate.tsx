@@ -20,8 +20,8 @@ export const Generate = () => {
           fontSize="2xl"
           fontWeight="thin"
         >
-          Just click next, and we will generate your e-filling tax exemptions
-          for you
+          Just click next, and we will generate your e-filing tax exemptions for
+          you
         </Heading>
       </Container>
     </Flex>

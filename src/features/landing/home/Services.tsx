@@ -8,31 +8,33 @@ interface Post {
 
 export const posts: Post[] = [
   {
-    name: "User-Friendly",
-    description: "Just click next and we will calculate the tax for you",
+    name: "Confused?",
+    description:
+      "Doesn't understand the different income tax exemptions category?  Don't worry, that's why we are here.",
   },
   {
-    name: "Quality & Fast",
+    name: "User-Friendly",
     description:
-      "Calculate your tax exemptions in just minutes instead of days or even months",
+      "Just click next and we will calculate your income tax exemptions for you.",
+  },
+  {
+    name: "Super Fast",
+    description:
+      "Calculate your tax exemptions in just minutes instead of days or even months.",
   },
   {
     name: "Reasonable Price",
-    description: "Settle your income tax for just RM 10",
-  },
-  {
-    name: "Net Salary Calculation",
-    description: "We will calculate your clean salary minus tax",
+    description: "Settle your income tax for just RM 25.",
   },
   {
     name: "Updated Tax Exemptions Changes Every Year",
     description:
-      "Tired of keeping track of all the different tax-exemptions every year? Leave it to us",
+      "Tired of keeping track of all the different tax-exemptions every year? Leave it to us.",
   },
   {
     name: "Certified Accounting",
     description:
-      "All our tax calculations are certified by audited accountants",
+      "All our tax calculations are certified by audited accountants.",
   },
 ];
 

@@ -13,6 +13,10 @@ const pageLinks: PageLink[] = [
     url: "/about-us",
   },
   {
+    name: "Demo",
+    url: "/get-your-tax",
+  },
+  {
     name: "Our Services",
     url: "/#services",
   },

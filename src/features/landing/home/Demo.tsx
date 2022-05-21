@@ -31,8 +31,8 @@ export function Demo() {
         fontWeight="normal"
         my="4"
       >
-        Just click next, and we will generate your e-filling tax exemptions for
-        you
+        Just click next, and we will generate your e-filing tax exemptions in a
+        PDF for you
       </Heading>
       <Button
         as={Link}
