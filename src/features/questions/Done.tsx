@@ -1,6 +1,7 @@
 import { Button, Container, Flex, Heading, Text } from "@chakra-ui/react";
 import React from "react";
 import { Link as ReactRouterLink, useHistory } from "react-router-dom";
+import { PRICE } from "../landing/home/Services";
 import { useExemptionAmount } from "./ExemptionAmount";
 import { QuestionType, useQuestion } from "./Question";
 
@@ -44,7 +45,7 @@ export const Done = () => {
           onClick={handleNext}
           maxWidth="80"
         >
-          Purchase Service for RM 25
+          Purchase Service for RM {PRICE}
         </Button>
       </Flex>
     </Container>

@@ -7,6 +7,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { Link as ReactRouterLink } from "react-router-dom";
+import { PRICE } from "../home/Services";
 
 export function CTO() {
   const isPortrait = useBreakpointValue({ base: true, md: false });
@@ -57,7 +58,7 @@ export function CTO() {
           fontSize="xl"
           borderRadius="none"
         >
-          {isPortrait ? "Purchase" : "Purchase our service for RM 25"}
+          {isPortrait ? "Purchase" : `Purchase our service for RM ${PRICE}`}
         </Button>
       </Container>
     </Flex>

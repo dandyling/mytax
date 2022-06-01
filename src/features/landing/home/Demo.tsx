@@ -7,6 +7,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
+import { PRICE } from "./Services";
 
 export function Demo() {
   const isPortrait = useBreakpointValue({ base: true, md: false });
@@ -50,7 +51,9 @@ export function Demo() {
           size="large"
           textTransform={isPortrait ? "uppercase" : "none"}
         >
-          {isPortrait ? "Purchase" : "Purchase our service for RM 25 only"}
+          {isPortrait
+            ? "Purchase"
+            : `Purchase our service for RM ${PRICE} only`}
         </Text>
       </Button>
     </Flex>

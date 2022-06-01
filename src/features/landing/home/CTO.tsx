@@ -1,6 +1,7 @@
 import { Container, Flex, Heading, Button } from "@chakra-ui/react";
 import React from "react";
 import { Link as ReactRouterLink } from "react-router-dom";
+import { PRICE } from "./Services";
 
 export const CTO = () => {
   return (
@@ -36,7 +37,7 @@ export const CTO = () => {
           fontStyle="italic"
           my="4"
         >
-          Only for RM 25
+          Only for RM {PRICE}
         </Heading>
         <Button
           to="/purchase"

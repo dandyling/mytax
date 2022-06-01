@@ -1,42 +1,7 @@
 import { Container, Flex, Heading, Grid, Text } from "@chakra-ui/react";
 import React from "react";
 
-interface Post {
-  name: string;
-  description: string;
-}
-
-export const posts: Post[] = [
-  {
-    name: "Confused?",
-    description:
-      "Doesn't understand the different income tax exemptions category?  Don't worry, that's why we are here.",
-  },
-  {
-    name: "User-Friendly",
-    description:
-      "Just click next and we will calculate your income tax exemptions for you.",
-  },
-  {
-    name: "Super Fast",
-    description:
-      "Calculate your tax exemptions in just minutes instead of days or even months.",
-  },
-  {
-    name: "Reasonable Price",
-    description: "Settle your income tax for just RM 25.",
-  },
-  {
-    name: "Updated Tax Exemptions Changes Every Year",
-    description:
-      "Tired of keeping track of all the different tax-exemptions every year? Leave it to us.",
-  },
-  {
-    name: "Certified Accounting",
-    description:
-      "All our tax calculations are certified by audited accountants.",
-  },
-];
+export const PRICE = 10;
 
 export const Services = () => {
   return (
@@ -101,3 +66,40 @@ export const Services = () => {
     </Flex>
   );
 };
+
+interface Post {
+  name: string;
+  description: string;
+}
+
+export const posts: Post[] = [
+  {
+    name: "Confused?",
+    description:
+      "Doesn't understand the different income tax exemptions category?  Don't worry, that's why we are here.",
+  },
+  {
+    name: "User-Friendly",
+    description:
+      "Just click next and we will calculate your income tax exemptions for you.",
+  },
+  {
+    name: "Super Fast",
+    description:
+      "Calculate your tax exemptions in just minutes instead of days or even months.",
+  },
+  {
+    name: "Reasonable Price",
+    description: `Settle your income tax for just RM ${PRICE}.`,
+  },
+  {
+    name: "Updated Tax Exemptions Changes Every Year",
+    description:
+      "Tired of keeping track of all the different tax-exemptions every year? Leave it to us.",
+  },
+  {
+    name: "Certified Accounting",
+    description:
+      "All our tax calculations are certified by audited accountants.",
+  },
+];

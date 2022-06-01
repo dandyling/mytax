@@ -19,6 +19,7 @@ import { Link as ReactRouterLink, useHistory } from "react-router-dom";
 import { FaAngleLeft } from "react-icons/fa";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../App";
+import { PRICE } from "../landing/home/Services";
 
 export function Purchase() {
   const [cardNumber, setCardNumber] = useState("");
@@ -68,7 +69,8 @@ export function Purchase() {
             <Heading as="h1">Confirm and Pay</Heading>
           </Flex>
           <Text my={[4]} fontWeight={["normal", null, "thin"]}>
-            You will get a PDF copy of all your income tax exemptions for RM 25.
+            You will get a PDF copy of all your income tax exemptions for RM{" "}
+            {PRICE}.
           </Text>
           <Text fontWeight={["normal", null, "thin"]}>
             Purchase now and get your tax paid in a few minutes.
