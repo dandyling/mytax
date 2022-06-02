@@ -8,6 +8,7 @@ import { Home } from "./features/landing/home/Home";
 import { GetTax } from "./features/questions/GetTax";
 import { Purchase } from "./features/service/Purchase";
 import ReactGA from "react-ga";
+import { CreateAccount } from "./features/landing/create-account/CreateAccount";
 
 export const Main = () => {
   const history = useHistory();
@@ -25,6 +26,9 @@ export const Main = () => {
     <Switch>
       <Route path="/about-us">
         <AboutUs />
+      </Route>
+      <Route path="/trading-profit-and-loss-account">
+        <CreateAccount />
       </Route>
       <Route path="/contact-us">
         <ContactUs />

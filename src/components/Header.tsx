@@ -17,6 +17,10 @@ const pageLinks: PageLink[] = [
     url: "/get-your-tax",
   },
   {
+    name: "Trading, Profit and Loss Account",
+    url: "/trading-profit-and-loss-account",
+  },
+  {
     name: "Our Services",
     url: "/#services",
   },
