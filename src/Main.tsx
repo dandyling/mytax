@@ -9,6 +9,7 @@ import { GetTax } from "./features/questions/GetTax";
 import { Purchase } from "./features/service/Purchase";
 import ReactGA from "react-ga";
 import { CreateAccount } from "./features/landing/create-account/CreateAccount";
+import { Questions } from "./features/questions/Questions";
 
 export const Main = () => {
   const history = useHistory();
@@ -40,7 +41,7 @@ export const Main = () => {
         <Purchase />
       </Route>
       <Route path="/get-your-tax">
-        <GetTax />
+        <Questions />
       </Route>
       <Route path="/">
         <Home />

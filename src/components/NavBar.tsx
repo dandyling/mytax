@@ -111,7 +111,7 @@ export const ResponsiveNavBar = styled(NavBar)`
         justify-content: space-between;
         width: 100%;
         h2, button {
-          color: ${props.isExpanded ? "black" : "white"};
+          color: ${props.isExpanded ? "black" : "black"};
         }
       }
       .navbar__middle {
@@ -123,7 +123,7 @@ export const ResponsiveNavBar = styled(NavBar)`
           color: black;
         }
       }
-      .navbar__end {
+      .navbar__end {d
         visibility: hidden;
         flex-direction: column;
         justify-content: flex-end;

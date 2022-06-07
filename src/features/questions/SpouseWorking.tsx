@@ -18,7 +18,7 @@ export const SpouseWorking = () => {
       <OrderedList start={question}>
         <ListItem fontSize="2xl">
           <Heading as="h1" fontSize="2xl" color="blackAlpha.700">
-            Does your spouse claim income tax exemption under his/her own name?
+            Do you claim tax separately from your spouse?
           </Heading>
           <Flex py={8} flexDirection="column">
             <BoxButton my={1} leftContent="Y" onClick={goNext}>

@@ -9,24 +9,24 @@ export interface PageLink {
 
 const pageLinks: PageLink[] = [
   {
-    name: "About Us",
-    url: "/about-us",
-  },
-  {
-    name: "Demo",
-    url: "/get-your-tax",
+    name: "Home",
+    url: "/",
   },
   {
     name: "Trading, Profit and Loss Account",
     url: "/trading-profit-and-loss-account",
   },
   {
-    name: "Our Services",
-    url: "/#services",
+    name: "Demo",
+    url: "/get-your-tax",
   },
   {
     name: "Contact Us",
     url: "/contact-us",
+  },
+  {
+    name: "About Us",
+    url: "/about-us",
   },
 ];
 
