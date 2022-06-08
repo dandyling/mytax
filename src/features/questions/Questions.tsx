@@ -7,7 +7,7 @@ export const Questions = () => {
 
   useEffect(() => {
     setQuestion(QuestionType.GetStarted);
-  }, [setQuestion, QuestionType]);
+  }, [setQuestion]);
 
   return <GetTax />;
 };

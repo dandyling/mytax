@@ -14,7 +14,7 @@ export function Home() {
 
   useEffect(() => {
     setQuestion(QuestionType.GetStarted);
-  }, [setQuestion, QuestionType]);
+  }, [setQuestion]);
 
   return (
     <Layout>
