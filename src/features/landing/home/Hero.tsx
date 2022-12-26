@@ -1,5 +1,6 @@
 import { Container, Flex, Heading, Button, Text } from "@chakra-ui/react";
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const Hero = () => {
   return (
@@ -35,8 +36,8 @@ export const Hero = () => {
           Find it difficult to do e-Filing? Let us do the heavy work for you
         </Heading>
         <Button
-          as={"a"}
-          href="https://dandyling.typeform.com/to/ET1gSfGZ"
+          as={Link}
+          to="get-your-tax"
           backgroundColor="purple.500"
           color="white"
           padding="8"
